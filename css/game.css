@@ -1,0 +1,12 @@
+.background    { background: #110705;
+                 table-layout: fixed;
+                 border-spacing: 0;   }
+.background td { padding: 0;          }
+.lava          { background: #b51f0c; }
+.wall          { background: #3e140d;   }
+.smoke         { background: rgb(77, 41, 33);   }
+.volcanoWall   { background: #29140f;   }
+
+.game {
+  position: relative;
+}
