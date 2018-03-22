@@ -7,6 +7,12 @@
 .smoke         { background: rgb(77, 41, 33);   }
 .volcanoWall   { background: #29140f;   }
 
+.actor  { position: absolute;  }
+.player { background: rgb(64, 64, 64); }
+
 .game {
+  overflow: hidden;
+  max-width: 600px;
+  max-height: 450px;
   position: relative;
 }
