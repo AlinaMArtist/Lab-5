@@ -100,7 +100,7 @@ Coin.prototype.type = "coin";
 
 // Add a new actor type as a class
 function PowerUpON(pos) {
-  this.basePos = this.pos = pos.plus(new Vector(0, 0));
+  this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
   this.size = new Vector(1, 1);
   // Make it go back and forth in a sine wave.
   this.wobble = Math.random() * Math.PI * 2;
@@ -109,9 +109,10 @@ PowerUpON.prototype.type = "powerupon";
 
 // Add a new actor type as a class
 function PowerUpOFF(pos) {
-  this.basePos = this.pos = pos.plus(new Vector(0, 0));
+  this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
   this.size = new Vector(1, 1);
   // Make it go back and forth in a sine wave.
+  this.wobble = Math.random() * Math.PI * 2;
 }
 PowerUpOFF.prototype.type = "powerupoff";
 
@@ -119,6 +120,7 @@ function Fireball(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
   this.size = new Vector(0.8, 0.8);
   // Make it go back and forth in a sine wave.
+  this.wobble = Math.random() * Math.PI * 2;
 }
 Fireball.prototype.type = "fireball";
 
@@ -332,16 +334,6 @@ Fireball.prototype.act = function(step) {
   this.wobble += step * fireJumpSpeed;
   var wobblePos = Math.sin(this.wobble) * fireJumpDist;
   this.pos = this.basePos.plus(new Vector(0, wobblePos));  //  `````````````````````````````````````````````````````````````````````````````````````````````
-};
-
-var maxStep = 0.05;
-
-var wobbleSpeed = 8, wobbleDist = 0.07;
-
-Coin.prototype.act = function(step) {
-  this.wobble += step * wobbleSpeed;
-  var wobblePos = Math.sin(this.wobble) * wobbleDist;
-  this.pos = this.basePos.plus(new Vector(0, wobblePos));
 };
 
 var maxStep = 0.05;
