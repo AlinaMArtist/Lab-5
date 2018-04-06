@@ -34,5 +34,5 @@
 }
 
 .won .player {
-  box-shadow: -4px -7px 8px yellow, 4px -7px 8px yellow;
+  background: rgb(160, 160, 10);
 }
