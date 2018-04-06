@@ -7,12 +7,32 @@
 .smoke         { background: rgb(77, 41, 33);   }
 .volcanoWall   { background: #29140f;   }
 
-.actor  { position: absolute;  }
-.player { background: rgb(64, 64, 64); }
+.actor         { position: absolute;  }
+.coin          { background: rgb(241, 229, 89); }
+.powerupon       { background: #22ff11; }
+.powerupoff       { background: #2211ff; }
+.player        { background: rgb(64, 64, 64); }
+.fireball      { background: #b51f0c; }
 
 .game {
   overflow: hidden;
   max-width: 600px;
   max-height: 450px;
   position: relative;
+}
+
+.lost .player {
+  background: rgb(160, 64, 64);
+}
+
+.powerupon .player {
+  background: rgb(60, 100, 60);
+}
+
+.powerupoff .player {
+  background: rgb(64, 64, 64);
+}
+
+.won .player {
+  box-shadow: -4px -7px 8px yellow, 4px -7px 8px yellow;
 }
